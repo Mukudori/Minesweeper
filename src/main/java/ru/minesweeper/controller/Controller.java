@@ -70,6 +70,7 @@ public class Controller
         view.bindFinishGameListener(this);
         view.bindFlagListener(this);
         view.bindSetLevel(this);
+        timer.bindTickListener(view);
     }
 
     @Override
@@ -87,6 +88,7 @@ public class Controller
         } else {
             log.info("Стартую игру для модели");
             model.onGameStart(cell);
+            timer.start();
         }
     }
 
