@@ -270,10 +270,10 @@ public class MinesweeperModel implements StartGameListener {
         openCell(firstCell);
         gameStarted = true;
         onFlagDelegate.broadcastUpdate(level.mineCount);
-        //debugPrint();
+        debugPrint();
     }
 
-    /*private void debugPrint(){
+    private void debugPrint(){
         for (int i=0; i<field.size(); i++) {
             String line = "";
             for (int j = 0; j < field.get(0).size();  j++) {
@@ -281,7 +281,7 @@ public class MinesweeperModel implements StartGameListener {
             }
             System.out.println(line);
         }
-    }*/
+    }
 
     public boolean isGameStarted() {
         return gameStarted;
